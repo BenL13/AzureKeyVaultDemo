@@ -1,0 +1,17 @@
+{
+  "version": "2.0",
+  "logging": {
+    "LogLevel": {
+      "Default": "Information"
+    },
+    "applicationInsights": {
+      "samplingExcludedTypes": "Request",
+      "samplingSettings": {
+        "isEnabled": true
+      }
+    },
+    "ApplicationInsights": {
+      "InstrumentationKey": "efbbc907-14db-41e3-87f0-185f4c917cb9"
+    }
+  }
+}

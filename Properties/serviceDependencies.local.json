@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "storage1": {
+      "type": "storage.emulator",
+      "connectionId": "AzureWebJobsStorage"
+    },
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/Test-DemoVault12",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri",
+      "secretStore": null
+    },
+    "secrets2": {
+      "type": "secrets.user"
+    },
+    "appInsights1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/microsoft.insights/components/AzureFunctionsDemo",
+      "type": "appInsights.azure",
+      "connectionId": "APPINSIGHTS_CONNECTIONSTRING",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
