@@ -25,8 +25,7 @@ namespace AzureKeyVaultDemo
             }
             catch (CosmosException ex) 
             {
-
-                Console.WriteLine("Error While creating Item"+ex.Message);
+                throw ex;
             }
         }
 

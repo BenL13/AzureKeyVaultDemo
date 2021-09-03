@@ -15,8 +15,15 @@ namespace AzureKeyVaultDemo
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
             var response = JsonConvert.DeserializeObject<Family>(myQueueItem);
-            StoreData sd = new StoreData();
-            await sd.AddItemsToContainerAsync(response);
+            try
+            {
+                StoreData sd = new StoreData();
+                await sd.AddItemsToContainerAsync(response);
+            }
+            catch(Exception ex)
+            {
+                log.LogError("Error Occurred inserting db records " + ex.Message);
+            }
         }
     }
 }
